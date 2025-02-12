@@ -65,5 +65,5 @@ async def delete_book(book_id: int) -> None:
 async def get_book_by_Id(book_id: int):
     single_book=db.books.get(book_id)
     if not single_book:
-        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="This book is not found")
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Book not found")
     return single_book
